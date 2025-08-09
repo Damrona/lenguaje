@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Lenguaje de Señas</title>
+    <style>
+        :root {
+            --primary: #2c7873;
+            --secondary: #6fb98f;
+            --accent: #ff9e00;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #e0e0e0;
+        }
+
+        /* Container for the image */
+.image {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    width: 100%;            /* Ensure container takes full width */
+    height: 100%;           /* Ensure container takes full height */
+}
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--accent);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            text-align: center;
+            border-top: 5px solid var(--accent);
+        }
+        
+        .category {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .category-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+        }
+        
+        .sign-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+            .sign-container2 {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray);
+    width: 700px; /* Set fixed width for larger cards */
+    height: 500px; /* Set fixed height to match */
+        }
+        
+        
+        .sign-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray);
+        }
+        
+        .sign-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .sign-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .sign-image3 {
+    width: 10%; /* Take full width of parent */
+    height: 10%; /* Take full height of parent */
+    object-fit: fill; /* Cover the entire space while maintaining aspect ratio */
+}
+
+.sign-image2 {
+    width: 100%; /* Take full width of parent */
+    height: 100%; /* Take full height of parent */
+    object-fit: cover; /* Cover the entire space while maintaining aspect ratio */
+    border-bottom: 1px solid var(--gray);
+}
+        
+        .sign-info {
+            padding: 1rem;
+        }
+        
+        .sign-word {
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .sign-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .back-to-top {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background: #ff8c00;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .sign-container {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guía Completa de Lenguaje de Señas</h1>
+            <p class="subtitle">Aprende comunicación básica en señas - Creado por Damian Molina (Desarrollo Web) y Laura Cardozo (Diseño gráfico)</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <h2>¡Bienvenido a tu guía de lenguaje de señas!</h2>
+            <p>Colegio Secundario Provincial N21 "José Font"</p>
+            <p>Esta página contiene las señas más importantes para comenzar a comunicarte.</p>
+        </section>
+        
+        <!-- Saludos -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">👋</div>
+                <h2>Saludos y Cortesías</h2>
+            </div>
+            <div class="sign-container">
+                <div class="sign-card">
+                    <img src="hola.jpg" alt="Seña para Hola" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Hola</h3>
+                        <p class="sign-description">Mueve la mano de lado a lado con la palma hacia afuera.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="adios.jpg" alt="Seña para Adiós" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Adiós</h3>
+                        <p class="sign-description">Abre y cierra la mano con la palma hacia afuera.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="gracias.jpg" alt="Seña para Gracias" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Gracias</h3>
+                        <p class="sign-description">Lleva los dedos a la barbilla y mueve la mano hacia adelante.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="porfavor.jpg" alt="Seña para Por favor" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Por favor</h3>
+                        <p class="sign-description">Mueve la mano circularmente sobre el pecho.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="perdon.jpg" alt="Seña para Perdón" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Perdón</h3>
+                        <p class="sign-description">Mueve la mano circularmente sobre el corazón.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Preguntas básicas -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">❓</div>
+                <h2>Preguntas Básicas</h2>
+            </div>
+            <div class="sign-container">
+                <div class="sign-card">
+                    <img src="how.gif" alt="Seña para Cómo" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">¿Cómo?</h3>
+                        <p class="sign-description">Mueve ambas manos hacia arriba con expresión interrogativa.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="what.gif" alt="Seña para Qué" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">¿Qué?</h3>
+                        <p class="sign-description">Mueve el dedo índice de lado a lado.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="where.gif" alt="Seña para Dónde" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">¿Dónde?</h3>
+                        <p class="sign-description">Mueve el dedo índice en círculo.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="when.jpg" alt="Seña para Cuándo" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">¿Cuándo?</h3>
+                        <p class="sign-description">Golpea suavemente el dorso de una mano con el dedo de la otra.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="why.jpg" alt="Seña para Por qué" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">¿Por qué?</h3>
+                        <p class="sign-description">Dibuja un signo de interrogación en el aire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Familia -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">👨‍👩‍👧‍👦</div>
+                <h2>Familia y Personas</h2>
+            </div>
+            <div class="sign-container">
+                <div class="sign-card">
+                    <img src="mom.jpg" alt="Seña para Madre" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Madre</h3>
+                        <p class="sign-description">Abre la mano y toca el pulgar en la barbilla.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="dad.jpg" alt="Seña para Padre" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Padre</h3>
+                        <p class="sign-description">Abre la mano y toca el pulgar en la frente.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="friend.jpg" alt="Seña para Amigo" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Amigo</h3>
+                        <p class="sign-description">Entrelaza los dedos índices de ambas manos.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="me.jpg" alt="Seña para Yo" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Yo</h3>
+                        <p class="sign-description">Señala hacia tu pecho con el dedo índice.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="you.jpg" alt="Seña para Tú" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Tú</h3>
+                        <p class="sign-description">Señala hacia la otra persona con el dedo índice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Necesidades básicas -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">🆘</div>
+                <h2>Necesidades Básicas</h2>
+            </div>
+            <div class="sign-container">
+                <div class="sign-card">
+                    <img src="help.jpg" alt="Seña para Ayuda" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Ayuda</h3>
+                        <p class="sign-description">Coloca una mano sobre la palma de la otra y levanta ambas.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="food.jpg" alt="Seña para Comida" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Comida</h3>
+                        <p class="sign-description">Junta las puntas de los dedos y llévalas a la boca.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="water.jpg" alt="Seña para Agua" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Agua</h3>
+                        <p class="sign-description">Haz el gesto de tomar agua con tres dedos.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="bathroom.jpg" alt="Seña para Baño" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Baño</h3>
+                        <p class="sign-description">Forma una T con las manos y agítala ligeramente.</p>
+                    </div>
+                </div>
+                
+                <div class="sign-card">
+                    <img src="hurt.jpg" alt="Seña para Dolor" class="sign-image">
+                    <div class="sign-info">
+                        <h3 class="sign-word">Dolor</h3>
+                        <p class="sign-description">Señala el área y haz un gesto de dolor con la cara.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Alfabeto -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">🔤</div>
+                <h2>Alfabeto</h2>
+            </div>
+            <div class="sign-container2">
+                <div class="sign-card">
+                    <img src="a.jpg" alt="Seña para A" class="sign-image2">
+                </div>
+        </section>
+        
+        <!-- Números -->
+        <section class="category">
+            <div class="category-header">
+                <div class="category-icon">🔢</div>
+                <h2>Números</h2>
+            </div>
+            <div class="sign-container2">
+                <div class="sign-card">
+                    <img src="numeros.jpg" alt="Seña para 1" class="sign-image2">
+                </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>Guía de Lenguaje de Señas</h3>
+                <div class="image">
+                    <img src="logo.png" alt="escuela logo" class="sign-image3" style="display: block;">
+                </div>
+            <a href="#" class="back-to-top">Volver arriba</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Botón para volver arriba
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>
